@@ -1,0 +1,6 @@
+data/io.github.idevecore.Sentinela.desktop.in
+data/io.github.idevecore.Sentinela.metainfo.xml.in
+data/io.github.idevecore.Sentinela.gschema.xml
+src/main.py
+src/window.py
+src/window.ui

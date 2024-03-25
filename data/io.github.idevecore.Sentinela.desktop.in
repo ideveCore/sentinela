@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=sentinela
+Exec=sentinela
+Icon=io.github.idevecore.Sentinela
+Terminal=false
+Type=Application
+Categories=GTK;
+StartupNotify=true
