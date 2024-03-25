@@ -2,7 +2,7 @@
 
 # sentinela.in
 #
-# Copyright 2024 Francisco
+# Copyright 2024 Ideve Core
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -32,8 +32,8 @@ localedir = '@localedir@'
 sys.path.insert(1, pkgdatadir)
 signal.signal(signal.SIGINT, signal.SIG_DFL)
 locale.bindtextdomain('sentinela', localedir)
-locale.textdomain('sentinela')
-gettext.install('sentinela', localedir)
+ui_trans = gettext.translation('sentinela', localedir, fallback=True)
+ui_trans.install(names=['gettext'])
 
 if __name__ == '__main__':
     import gi

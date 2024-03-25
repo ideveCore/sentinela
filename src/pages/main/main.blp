@@ -1,0 +1,15 @@
+using Gtk 4.0;
+using Adw 1;
+
+Adw.Bin main {
+  child: Gtk.Box {
+    hexpand: true;
+    vexpand: true;
+    orientation: vertical;
+    halign: center;
+    valign: center;
+    Gtk.Label {
+      label: _("Hello World!");
+    }
+  };
+}

@@ -1,4 +1,4 @@
-# main.py
+# utils.py
 #
 # Copyright 2024 Ideve Core
 #
@@ -17,8 +17,12 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-import sys
+from gi.repository import Adw, Gio
 
-from .application import application
+class Settings(Gio.Settings):
+  def __init__(self, *args):
+    super().__init__(*args)
 
-main = lambda version: application.run(sys.argv)
+class Utils:
+  def __init__(self, application: Adw.Application):
+    self.settings = Settings(application.get_application_id())

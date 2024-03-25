@@ -1,0 +1,13 @@
+[Desktop Entry]
+Name=Sentinela
+GenericName=Sentinela
+TryExec=valuta
+Exec=valuta
+Comment=It is a simple application with the aim of facilitating the visualization and organization of 2-factor codes. 
+Icon=@icon@
+Terminal=false
+Type=Application
+Categories=Utility;GTK;GNOME;
+StartupNotify=true
+X-Purism-FormFactor=Workstation;Mobile;
+X-GNOME-SingleWindow=true

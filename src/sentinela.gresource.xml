@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gresources>
   <gresource prefix="/io/github/idevecore/Sentinela">
+    <file compressed="true" alias="style.css">assets/styles.css</file>
+    <file preprocess="xml-stripblanks">components/shortcuts/shortcuts.ui</file>
+    <file preprocess="xml-stripblanks">pages/main/main.ui</file>
     <file preprocess="xml-stripblanks">window.ui</file>
-    <file preprocess="xml-stripblanks">gtk/help-overlay.ui</file>
   </gresource>
 </gresources>
+

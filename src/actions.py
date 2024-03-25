@@ -1,4 +1,4 @@
-# main.py
+# actions.py
 #
 # Copyright 2024 Ideve Core
 #
@@ -17,8 +17,22 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-import sys
+import gi
 
-from .application import application
+gi.require_version('Adw', '1')
 
-main = lambda version: application.run(sys.argv)
+from gi.repository import Gio, Adw
+from .about import about
+
+def application_actions(application: Adw.Application):
+  quit_action = Gio.SimpleAction.new(name='quit')
+  about_action = Gio.SimpleAction.new(name='about')
+
+  quit_action.connect('activate', lambda simple_action, parameter: application.quit())
+  about_action.connect('activate', lambda simple_action, parameter : about(application).present())
+
+  application.add_action(quit_action)
+  application.add_action(about_action)
+  application.set_accels_for_action('app.quit', ['<primary>q'])
+  application.set_accels_for_action('win.show-help-overlay', ['<Primary>question'])
+

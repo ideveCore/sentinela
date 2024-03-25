@@ -1,6 +1,6 @@
-# main.py
+# convertion.py
 #
-# Copyright 2024 Ideve Core
+# Copyright 2023 Ideve Core
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -17,8 +17,18 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-import sys
+import gi
+gi.require_version("Adw", "1")
+gi.require_version("Gtk", "4.0")
 
-from .application import application
+from gi.repository import Adw, Gtk
+from ...define import RES_PATH
 
-main = lambda version: application.run(sys.argv)
+resource = f"{RES_PATH}/pages/main/main.ui"
+
+def main_page(application: Adw.Application):
+  builder = Gtk.Builder.new_from_resource(resource)
+  page = builder.get_object("main")
+
+  return page
+

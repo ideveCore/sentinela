@@ -1,6 +1,6 @@
-# main.py
+# __init__.py
 #
-# Copyright 2024 Ideve Core
+# Copyright 2023 Ideve Core
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -17,8 +17,4 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-import sys
-
-from .application import application
-
-main = lambda version: application.run(sys.argv)
+from .main.main import main_page

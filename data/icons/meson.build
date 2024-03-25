@@ -1,13 +1,13 @@
-application_id = 'io.github.idevecore.Sentinela'
-
-scalable_dir = 'hicolor' / 'scalable' / 'apps'
+# ===== Install application icon ===== 
+scalable_dir = join_paths('hicolor', 'scalable', 'apps')
 install_data(
-  scalable_dir / ('@0@.svg').format(application_id),
-  install_dir: get_option('datadir') / 'icons' / scalable_dir
+  join_paths(scalable_dir, ('@0@.svg').format(application_id)),
+  install_dir: join_paths(get_option('datadir'), 'icons', scalable_dir)
 )
 
-symbolic_dir = 'hicolor' / 'symbolic' / 'apps'
+# ===== Install application symbolic icon ===== 
+symbolic_dir = join_paths('hicolor', 'symbolic', 'apps')
 install_data(
-  symbolic_dir / ('@0@-symbolic.svg').format(application_id),
-  install_dir: get_option('datadir') / 'icons' / symbolic_dir
+  join_paths(symbolic_dir, 'io.github.idevecore.Sentinela-symbolic.svg'),
+  install_dir: join_paths(get_option('datadir'), 'icons', symbolic_dir)
 )

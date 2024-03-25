@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop">
+  <id>@app-id@</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
+  <name>Sentinela</name>
+  <summary>2FAS manager</summary>
+  <description>
+    <p>It is a simple application with the aim of facilitating the visualization and organization of
+      2-factor codes. </p>
+  </description>
+  <url type="homepage">https://github.com/ideveCore/sentinela</url>
+  <url type="bugtracker">https://github.com/ideveCore/sentinela/issues</url>
+  <url type="vcs-browser">https://github.com/ideveCore/sentinela</url>
+  <url type="donation">https://ko-fi.com/idevecore</url>
+  <releases>
+    <release version="1.0.0" date="2024*">
+      <description translatable="no">
+        <p>Initial version</p>
+      </description>
+    </release>
+  </releases>
+  <requires>
+    <display_length compare="ge">400</display_length>
+  </requires>
+  <recommends>
+    <control>keyboard</control>
+    <control>pointing</control>
+    <control>touch</control>
+  </recommends>
+  <screenshots></screenshots>
+  <content_rating type="oars-1.1" />
+  <developer_name>Ideve Core</developer_name>
+</component>
+
